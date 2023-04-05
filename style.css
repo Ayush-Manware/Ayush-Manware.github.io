@@ -1,70 +1,170 @@
 *{
     margin: 0 auto;
     padding: 0px;
-    box-sizing: border-box;
-    /* border: 1px solid white; */
 }
 
 :root{
-    --orange: rgb(189, 104, 25);
+    --white: rgb(240, 236, 236);
+    --black: rgb(20, 20, 20);
+    --red: rgba(202, 22, 22, 0.404);
+    --gray: rgba(204, 204, 204, 0.404);
 }
 
-html{
-    background: rgb(0, 0, 0);
-    color: rgb(228, 224, 224);
+.banner{
+     width:100vw;
+     min-height: 650px;
 }
 
-.container{
-    margin: 0 auto; 
-    padding: 0px; 
-    box-sizing: border-box;
-}
-
-h1{font-family: 'Roboto Slab', serif;}  
-
-.container .side{
-     width: 25vw;
-     padding-inline: 10px;
-     background: rgb(12, 12, 12);
-     border-radius: 15px;
-     border: 1px solid rgb(88, 88, 88);
-     box-shadow: 11px 1px 10px black;
-    }
-
-.side .side_1{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center; 
-    gap: 10px; 
-    border-bottom: 1px solid rgb(163, 161, 161);
-    margin-bottom: 10px;
-    padding-bottom: 10px;
-}
-
-.container .side .avatar{
-      width: 15vw;
-      height: auto;
-}
-
-.side .side_1 > p{
-    background: var(--orange);
-    padding: 5px 15px;
-    border-radius: 5px;
-}
-
-.side_2 .side_info{
-    display: flex;
-    /* justify-content: ; */
-    align-items: center;
-    border-bottom: 1px solid white;
-    padding: 15px 5px;
-    margin-bottom: 10px;
-    border-radius: 4px;
+ #banner_video{
+    width: 100vw;
+    height: auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    position: fixed;
+    right: 0px;
+    top: 0px;
+    z-index: -1;
 } 
 
-.side_2 .side_info .side_icon{
-    border: 1px solid white;
+.created_with{
+    color: var(--white);
+    text-align: center;
+    font-size: 16px;
+    padding: 5px;
+    background-color: var(--black);
+}
+
+.banner li{
+    display: inline-block;
+    margin: 10px;
+    font-size: 20px;
+    color:var(--white);
+}
+.banner li a{
+    color: var(--white);
+}
+
+.banner ul:hover a{
+      opacity: 0.25;
+}
+
+.banner li a:hover{
+      opacity: 1;
+}
+
+.banner_text{
+    color: rgb(197, 196, 196);
+    font-size: 30px;
+    text-align: center;
+    margin-top: 220px;
+    margin-right: 20px;
+}
+
+.banner_text h4{
+    padding: 5px;
+    width: auto;
+    letter-spacing: 2px;
+    color: rgb(172, 108, 12);
+}
+
+@keyframes beep{
+    25%{
+        text-shadow: 0px 0px 5px rgb(237, 95, 95);
+    }
+    50%{
+        text-shadow: 0px 0px 10px rgb(237, 95, 95);
+    }
+    75%{
+        text-shadow: 0px 0px 10px rgb(237, 95, 95);
+    }
+    100%{
+        text-shadow: 0px 0px 5px rgb(237, 95, 95);
+    }
+
+}
+
+.banner_text h1{
+    /* animation-name: beep; */
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+/* navbar */
+nav{
+    display: flex; 
+    justify-content: space-evenly;
+    align-items: center;
     padding: 10px;
-    border-radius: 5px;
+    position: sticky;
+    top: 0px;
+    z-index: 1;
+    background:rgb(255, 255, 255);
+    box-shadow: 2px 1px 10px rgb(207, 207, 207);
+    margin-bottom: 3px;
+}
+
+.logo{
+    color: rgba(31, 30, 30, 0.904);
+    font-size: 60px;
+}
+
+.right a{
+    text-decoration: none;
+    padding-inline: 30px;
+    color: rgba(22, 22, 22, 0.904);
+    font-size: 22px;
+}
+
+/* section */
+
+section{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width:100vw;
+    color: var(--black);
+}
+
+.who{
+    height: 330px;
+    width: 353px;
+    border-inline: 1px solid rgba(161, 161, 161, 0.418);
+    background-color: rgb(255, 255, 255);
+    padding: 50px;
+
+}
+
+.who h2{
+    font-size: 35px;
+    margin: 30px 0px;
+}
+
+.who h5{
+    font-size: 20px;
+    margin: 30px 0px;
+}
+
+.who p{
+    font-size: 17px;
+    margin: 30px 0px;
+    text-align: justify;
+    color: var(--black);
+}
+
+.who .div1{
+    display: flex;
+    justify-content: space-around;
+    border: 1px solid;
+    align-items: center;
+    margin: 5px 0px;
+}
+
+
+.who .div1 p{
+    padding: 0px;
+    margin: 0px;
+    font-size: 20px;
 }
