@@ -198,18 +198,6 @@ section{
     font-size: large; 
 }
 
-.show{
-    width: ;
-}
-
-.resume .show{
-    display: hidden;
-}
-
-.resume:hover .show{
-    display: block;
-}
-
 .resume h3{
     margin: 15px 0px;
     font-size: 35px;
