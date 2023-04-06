@@ -12,7 +12,7 @@
     --red: rgba(202, 22, 22, 0.404);
     --gray: rgba(204, 204, 204, 0.404);
     --orange: rgb(172, 108, 12);
-    --pink: rgba(254, 77, 106, 0.851);
+    --pink: rgb(239, 82, 108);
 }
 
 h1, h2, h3, h4, h5{
@@ -27,12 +27,16 @@ p{
     font-weight: 360;
 }
 
+a{
+    text-decoration: none;
+ }
+
 .banner{
      width:100vw;
-     min-height: 600px;
+     min-height: 300px;
 }
 
- #banner_video{
+#banner_video{
     width: 100vw;
     height: auto;
     background-repeat: no-repeat;
@@ -43,7 +47,7 @@ p{
     right: 0px;
     top: 0px;
     z-index: -1;
-} 
+}  
 
 .social_media{
     color: var(--white);
@@ -65,7 +69,7 @@ p{
 }
 
 .banner li a:hover{
-      color: rgba(254, 77, 106, 0.851);
+      color: rgba(255, 110, 135, 0.851);
       transition: ease 0.3s;
 }
 
@@ -76,7 +80,7 @@ p{
 }
 
 .banner_text p{
-    color: rgba(254, 77, 106, 0.851);
+    color: rgb(241, 81, 108);
 }
 
 .banner_text h4{
@@ -107,24 +111,41 @@ p{
     letter-spacing: 2px;
 }
 
-/* navbar */
-.nav2{ 
-    display: flex;
-    justify-content: center;
+/* intro*/
+.intro{
+    background: rgb(239, 82, 108);
+    width: 100vw;
+    height: 80px;
+    position: sticky;
+    top: 0px;
     align-items: center;
+}
+
+.intro p{
+    color: white;
+    font-size: 30px;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+}
+
+/* navbar */
+.nav2{
     background: white;
+    width: 100vw;
+    text-align: center;
+    position: sticky;
+    top: 78px;
+    padding: 15px 0px;
+    display: flex;
+    box-shadow: 5px 5px 10px rgba(128, 128, 128, 0.5);
 }
 
 .nav2 a{
-    color: var(--pink);
-    text-decoration: none;
-    font-size: 30px;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 500;
+    color: rgb(239, 82, 108);
+    margin-inline: 20px;    
 }
 
 /* section */
-
 section{
     display: flex;
     flex-wrap: wrap;
@@ -133,18 +154,13 @@ section{
     width:100vw;
     background: white;
     color: var(--black);
-}
-.section2{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+    padding-bottom: 20px;
 }
 
 .who{
     height: 400px;
-    width: 350px;
-    border-inline: 1px solid rgba(12, 12, 12, 0.418);
+    width: 330px;
+    border: 1px solid rgba(12, 12, 12, 0.418);
     padding: 50px;
     color: var(--black);
 }
@@ -190,7 +206,100 @@ section{
     font-size: 20px;
 }
 
+article{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    background: white;
+}
 
+.card {
+    background-color: transparent;
+    width: 350px;
+    height: 300px;
+    border: 1px solid #f1f1f1;
+}
+  
+ 
+.card_inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+  
+
+.card:hover .card_inner {
+    transform: rotateY(180deg);
+}
+  
+
+.card_front, .card_back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+  
+.card_front {
+    background-color: rgb(239, 82, 108, 0.5);
+    color: black;
+    line-height: 300px;
+}
+
+.card_front h1{
+    font-size: 30px;
+}
+  
+.card_back {
+    background-color:white;
+    color: var(--black);
+    transform: rotateY(180deg);
+    border: 1px solid  rgb(239, 82, 108);
+}
+
+.freelance{
+    width: 100vw;
+    background: var(--black);
+    margin-top: 1px;
+    text-align: center;
+    padding: 10px 0px;
+}
+
+.freelance h2{
+    color: var(--white);
+    line-height: 150px;
+    font-size: 40px;
+}
+
+.hire_btn{
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+    font-size: 20px;
+    background: var(--pink);
+    outline: none;
+    padding: 10px 50px;
+}
+
+.hire_btn:hover{
+    transition: 0.2s;
+    background: rgb(225, 50, 50);
+}
+
+
+
+
+/* .section2{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid pink; 
+}
 
 .resume{
     width: 300px;
@@ -207,9 +316,9 @@ section{
 
 .resume p{
     color: var(--black);
-}
+} */
 
-.border-right{
+/* .border-right{
     border-left: 5px solid var(--pink);
     border-radius: 6px;
-}
+} */
